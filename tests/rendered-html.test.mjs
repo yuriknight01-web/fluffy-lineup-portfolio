@@ -84,6 +84,9 @@ test("uses the official GitHub Pages deployment actions", async () => {
   assert.match(workflow, /actions\/configure-pages@v5/);
   assert.match(workflow, /actions\/upload-pages-artifact@v4/);
   assert.match(workflow, /actions\/deploy-pages@v4/);
-  assert.match(workflow, /pnpm install --no-frozen-lockfile/);
+  assert.match(
+    workflow,
+    /pnpm install --no-frozen-lockfile --ignore-scripts/,
+  );
   assert.match(workflow, /path:\s*\.\/out/);
 });
