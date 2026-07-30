@@ -56,3 +56,33 @@ test("ships bilingual controls and accessible media", async () => {
   assert.match(html, /alt="Fluffy Lineup/);
   assert.match(css, /prefers-reduced-motion/);
 });
+
+test("defines the GitHub Pages static export contract", async () => {
+  const nextConfig = await readFile(
+    new URL("../next.config.ts", import.meta.url),
+    "utf8",
+  );
+  const packageJson = JSON.parse(
+    await readFile(new URL("../package.json", import.meta.url), "utf8"),
+  );
+
+  assert.equal(
+    packageJson.scripts["build:pages"],
+    "cross-env GITHUB_PAGES=true next build",
+  );
+  assert.match(nextConfig, /output:\s*isGitHubPages\s*\?\s*"export"/);
+  assert.match(nextConfig, /basePath:\s*isGitHubPages\s*\?\s*repositoryPath/);
+  assert.match(nextConfig, /assetPrefix:\s*isGitHubPages\s*\?\s*repositoryPath/);
+});
+
+test("uses the official GitHub Pages deployment actions", async () => {
+  const workflow = await readFile(
+    new URL("../.github/workflows/pages.yml", import.meta.url),
+    "utf8",
+  );
+
+  assert.match(workflow, /actions\/configure-pages@v5/);
+  assert.match(workflow, /actions\/upload-pages-artifact@v4/);
+  assert.match(workflow, /actions\/deploy-pages@v4/);
+  assert.match(workflow, /path:\s*\.\/out/);
+});

@@ -34,28 +34,28 @@ const content = {
         no: "01",
         title: "Shop with a plan",
         body: "Read the odds, lock the right offers, and decide whether your coins become tempo now or options later.",
-        image: "/media/shop.webp",
+        image: "media/shop.webp",
         alt: "Fluffy Lineup wooden pet shop environment",
       },
       {
         no: "02",
         title: "Arrange the lineup",
         body: "Five positions form a real strategy layer: the rightmost pet leads, while timing and traits shape every swap.",
-        image: "/media/pets.webp",
+        image: "media/pets.webp",
         alt: "Fluffy Lineup creatures arranged across the battlefield",
       },
       {
         no: "03",
         title: "Watch plans collide",
         body: "Pets attack in readable sequences with distinct elemental timing, impact, sound, and carefully staged reactions.",
-        image: "/media/battle.webp",
+        image: "media/battle.webp",
         alt: "Fluffy Lineup bright outdoor battle arena",
       },
       {
         no: "04",
         title: "Climb the final table",
         body: "Each round feeds an eight-player result, turning a cute squad into a story about adaptation and survival.",
-        image: "/media/result.webp",
+        image: "media/result.webp",
         alt: "Fluffy Lineup celebratory result arena",
       },
     ],
@@ -80,9 +80,9 @@ const content = {
     galleryCopy:
       "Soft light, storybook materials, readable silhouettes, and playful UI keep the strategy welcoming even as the systems deepen.",
     galleryItems: [
-      ["/media/lobby.webp", "The sunlit game lobby", "A welcoming hub for every mode."],
-      ["/media/pets.webp", "Creature roster", "Distinct silhouettes stay readable in a five-pet lineup."],
-      ["/media/effects.webp", "Combat expression", "Elemental timing and impact are tuned per attack family."],
+      ["media/lobby.webp", "The sunlit game lobby", "A welcoming hub for every mode."],
+      ["media/pets.webp", "Creature roster", "Distinct silhouettes stay readable in a five-pet lineup."],
+      ["media/effects.webp", "Combat expression", "Elemental timing and impact are tuned per attack family."],
     ],
     developmentLabel: "My contribution",
     developmentTitle: "Designing the system and the feeling together.",
@@ -131,28 +131,28 @@ const content = {
         no: "01",
         title: "有计划地逛商店",
         body: "观察刷新概率、锁定合适商品，判断金币应该立即转化为战力，还是留给下一轮更多可能。",
-        image: "/media/shop.webp",
+        image: "media/shop.webp",
         alt: "绒星排排乐木质萌宠商店场景",
       },
       {
         no: "02",
         title: "调整阵容顺序",
         body: "固定五个位置构成真正的策略层：最右侧宠物率先出战，换位、特性与触发时机都会影响结果。",
-        image: "/media/pets.webp",
+        image: "media/pets.webp",
         alt: "绒星排排乐战斗场地中的萌宠阵容",
       },
       {
         no: "03",
         title: "观看策略碰撞",
         body: "宠物依次攻击，不同属性拥有独立节奏、打击、音效和受击反馈，让战斗清晰又有表现力。",
-        image: "/media/battle.webp",
+        image: "media/battle.webp",
         alt: "绒星排排乐明亮的户外对战场景",
       },
       {
         no: "04",
         title: "进入最终排名",
         body: "每轮结果都会进入八人排名，让一支可爱阵容逐渐变成关于调整、坚持与反败为胜的故事。",
-        image: "/media/result.webp",
+        image: "media/result.webp",
         alt: "绒星排排乐庆祝胜利的结算场景",
       },
     ],
@@ -177,9 +177,9 @@ const content = {
     galleryCopy:
       "柔和光线、绘本材质、清晰轮廓和活泼 UI，让系统逐渐加深时仍然保持轻松亲切。",
     galleryItems: [
-      ["/media/lobby.webp", "阳光下的游戏大厅", "所有模式共同使用的温暖入口。"],
-      ["/media/pets.webp", "萌宠阵容", "不同轮廓在五只阵容中仍能保持清晰。"],
-      ["/media/effects.webp", "战斗表现", "不同攻击家族拥有对应的属性节奏与打击反馈。"],
+      ["media/lobby.webp", "阳光下的游戏大厅", "所有模式共同使用的温暖入口。"],
+      ["media/pets.webp", "萌宠阵容", "不同轮廓在五只阵容中仍能保持清晰。"],
+      ["media/effects.webp", "战斗表现", "不同攻击家族拥有对应的属性节奏与打击反馈。"],
     ],
     developmentLabel: "我的工作",
     developmentTitle: "同时设计游戏系统与玩家感受。",
@@ -289,7 +289,7 @@ export function PortfolioPage() {
       <section className="hero" id="top">
         <img
           className="hero-image"
-          src="/media/hero.webp"
+          src="media/hero.webp"
           alt="Fluffy Lineup sunlit pet lobby with playful animals"
         />
         <div className="hero-shade" />
@@ -385,7 +385,7 @@ export function PortfolioPage() {
           <p>{copy.videoBody}</p>
         </div>
         <div className="video-frame">
-          <img src="/media/video-poster.webp" alt="Fluffy Lineup gameplay video poster" />
+          <img src="media/video-poster.webp" alt="Fluffy Lineup gameplay video poster" />
           <div className="video-overlay">
             <span className="video-icon" aria-hidden="true">▶</span>
             <strong>{copy.videoStatus}</strong>
@@ -436,7 +436,7 @@ export function PortfolioPage() {
       </section>
 
       <footer className="project-footer">
-        <img src="/media/lobby.webp" alt="" aria-hidden="true" />
+        <img src="media/lobby.webp" alt="" aria-hidden="true" />
         <div className="footer-shade" />
         <div className="footer-content">
           <p className="section-label">{copy.footerKicker}</p>

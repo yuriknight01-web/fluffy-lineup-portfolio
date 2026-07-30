@@ -1,8 +1,15 @@
 import type { Metadata } from "next";
 import "./globals.css";
 
+const isGitHubPages = process.env.GITHUB_PAGES === "true";
+const repositoryPath = "/fluffy-lineup-portfolio";
+const publicOrigin = isGitHubPages
+  ? "https://yuriknight01-web.github.io"
+  : "https://fluffy-lineup-xitao.yuriknight01.chatgpt.site";
+const publicBase = isGitHubPages ? repositoryPath : "";
+
 export const metadata: Metadata = {
-  metadataBase: new URL("https://fluffy-lineup.openai.site"),
+  metadataBase: new URL(`${publicOrigin}${publicBase}/`),
   title: {
     default: "Fluffy Lineup — Xitao Liao",
     template: "%s | Fluffy Lineup",
@@ -20,22 +27,22 @@ export const metadata: Metadata = {
     "Godot",
   ],
   icons: {
-    icon: "/favicon.png",
-    shortcut: "/favicon.png",
+    icon: `${publicBase}/favicon.png`,
+    shortcut: `${publicBase}/favicon.png`,
   },
   openGraph: {
     title: "Fluffy Lineup — Xitao Liao",
     description:
       "Cute creatures. Smart lineups. A bilingual game design and development case study.",
     type: "website",
-    images: [{ url: "/og.png", width: 1708, height: 909 }],
+    images: [{ url: `${publicBase}/og.png`, width: 1708, height: 909 }],
   },
   twitter: {
     card: "summary_large_image",
     title: "Fluffy Lineup — Xitao Liao",
     description:
       "Cute creatures. Smart lineups. A bilingual game design and development case study.",
-    images: ["/og.png"],
+    images: [`${publicBase}/og.png`],
   },
 };
 
